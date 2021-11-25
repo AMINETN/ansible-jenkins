@@ -1,18 +1,26 @@
-- name: install nginx
+--- 
+- 
+  name: "Add epel-release repo"
   yum: 
-    name:
+    name: epel-release
+    state: present
+- 
+  become: true
+  name: "install nginx"
+  yum: 
+    name: 
       - nginx
-    state: latest
-  become: yes
-
-- name: start nginx
-  service:
+    state: present
+    update_cache: true
+- 
+  become: true
+  name: "start nginx"
+  service: 
     name: nginx
     state: started
-  become: yes
-
-- name: index
-  template:
-    src: index.html.j2
+- 
+  name: index
+  template: 
     dest: /var/www/html/index.html
+    src: index.html.j2
 
