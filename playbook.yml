@@ -5,10 +5,7 @@
   hosts: web-servers
   remote_user: ansadmin
   tasks: 
-    - 
-      group: 
-        name: amine2
-        state: present
-      name: "creer le group"
+    - roles:
+        - nginx
 
 
