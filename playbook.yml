@@ -1,7 +1,6 @@
 
 - name: install nginx
-  hosts: all
-  remote_user: root
+  hosts: web-servers
   become: yes
   roles:
     - nginx
