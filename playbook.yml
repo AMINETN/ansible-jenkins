@@ -4,8 +4,7 @@
   become: true
   hosts: web-servers
   remote_user: ansadmin
-  tasks: 
-    - roles:
+  roles:
         - nginx
 
 
