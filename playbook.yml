@@ -1,6 +1,7 @@
 
 - name: install nginx
   remote_user: root
+  ansible_Sudo_pass: 12345
   hosts: web-servers
   become: yes
   roles:
