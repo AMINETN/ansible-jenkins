@@ -21,6 +21,6 @@
 - 
   name: index
   template: 
-    dest: /var/www/html/index.html
+    dest: /usr/share/nginx/html/index.html
     src: index.html.j2
 
