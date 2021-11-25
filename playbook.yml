@@ -3,7 +3,9 @@
   remote_user: ansadmin
   hosts: web-servers
   become: yes
-  roles:
-    - nginx
+  - name: creer le group
+    group:
+      name: anis
+      state: present
 
 
