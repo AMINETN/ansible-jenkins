@@ -1,11 +1,14 @@
 
-- name: install nginx
-  remote_user: ansadmin
+--- 
+- 
+  become: true
   hosts: web-servers
-  become: yes
-  - name: creer le group
-    group:
-      name: anis
-      state: present
+  remote_user: ansadmin
+  tasks: 
+    - 
+      group: 
+        name: amine2
+        state: present
+      name: "creer le group"
 
 
